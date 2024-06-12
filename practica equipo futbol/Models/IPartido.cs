@@ -5,10 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace practica_equipo_futbol.Models
-{  
-        public interface IPartido
-        {
-            string simularPartido();
-        }
-    
+{
+    public interface IPartido
+    {
+        string SimularPartido();
+    }
 }

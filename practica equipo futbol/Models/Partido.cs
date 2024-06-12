@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace practica_equipo_futbol.Models
 {
@@ -16,13 +12,14 @@ namespace practica_equipo_futbol.Models
             this.equipoLocal = equipoLocal;
             this.equipoVisitante = equipoVisitante;
         }
-        public string simularPartido()
+
+        public string SimularPartido()
         {
             Random rnd = new Random();
-            int golesLocal = rnd.Next(0, 5); // Genera un número aleatorio entre 0 y 4 (inclusive).
+            int golesLocal = rnd.Next(0, 5);
             int golesVisitante = rnd.Next(0, 5);
 
-            return $"{equipoLocal.nombre} {golesLocal} - {golesVisitante} {equipoVisitante.nombre}";
+            return $"{equipoLocal.Nombre} {golesLocal} - {golesVisitante} {equipoVisitante.Nombre}";
         }
     }
 }
