@@ -8,12 +8,14 @@ namespace practica_equipo_futbol.Models
         public int Id { get; set; }
         public string Nombre { get; set; }
         public string Entrenador { get; set; }
+        public string Ciudad { get; set; }  // Puede ser null
         public List<Jugador> Jugadores { get; set; }
 
-        public Equipo(string nombre, string entrenador)
+        public Equipo(string nombre, string entrenador, string ciudad)
         {
             this.Nombre = nombre;
             this.Entrenador = entrenador;
+            this.Ciudad = ciudad;  // Puede ser null
             Jugadores = new List<Jugador>();
         }
 

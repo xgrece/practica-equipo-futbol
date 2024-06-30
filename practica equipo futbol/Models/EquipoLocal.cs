@@ -9,7 +9,7 @@ namespace practica_equipo_futbol.Models
     public class EquipoLocal : Equipo, IPartido
     {
         // Constructor
-        public EquipoLocal(string nombre, string entrenador) : base(nombre, entrenador) { }
+        public EquipoLocal(string nombre, string entrenador, string ciudad) : base(nombre, entrenador, ciudad) { }
 
         public string SimularPartido()
         {
