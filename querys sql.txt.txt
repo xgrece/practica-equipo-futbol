@@ -1,0 +1,50 @@
+1. Obtener la lista de equipos
+SELECT id, nombre, entrenador, ciudad FROM equipos;
+
+2. Obtener la lista de jugadores de un equipo específico
+SELECT id, nombre, numero FROM jugadores WHERE equipo_id = @equipoId;
+
+3. Obtener la lista de todos los equipos y sus entrenadores
+SELECT id, nombre, entrenador, ciudad FROM equipos;
+
+4. Obtener el número de jugadores por equipo
+SELECT COUNT(*) FROM jugadores WHERE equipo_id = @equipoId;
+
+5. Actualizar la ciudad de un equipo
+UPDATE equipos SET ciudad = @ciudad WHERE id = @equipoId;
+
+6. Obtener la lista de equipos y sus jugadores ordenados
+SELECT 
+    e.id AS EquipoId, 
+    e.nombre AS EquipoNombre, 
+    e.entrenador AS EquipoEntrenador, 
+    e.ciudad AS EquipoCiudad,
+    j.id AS JugadorId, 
+    j.nombre AS JugadorNombre, 
+    j.numero AS JugadorNumero
+FROM 
+    equipos e
+LEFT JOIN 
+    jugadores j 
+ON 
+    e.id = j.equipo_id
+ORDER BY 
+    e.nombre, j.nombre;
+
+7. Cambiar el equipo de un jugador
+UPDATE jugadores SET equipo_id = @nuevoEquipoId WHERE id = @jugadorId;
+
+8. Obtener la lista de equipos sin jugadores
+SELECT 
+    e.id, 
+    e.nombre, 
+    e.entrenador, 
+    e.ciudad
+FROM 
+    equipos e
+LEFT JOIN 
+    jugadores j 
+ON 
+    e.id = j.equipo_id
+WHERE 
+    j.id IS NULL;
