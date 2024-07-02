@@ -7,8 +7,7 @@ Para establecer una conexión a una base de datos utilizando los parámetros alm
 3. Parsear los datos del archivo para obtener los parámetros de conexión.
 4. Utilizar los parámetros de conexión para establecer la conexión a la base de datos.
 
-ejemplo utilizando c# y una conexion a una base de datos MySQL. Supondremos que el archivo .txt contiene los parámetros de conexión en un formato clave-valor.
-
+------------
 ### nota:
 - Asegúrate de tener instalado el paquete MySql.Data en tu proyecto. Puedes instalarlo a través de NuGet con el siguiente comando:
 
@@ -17,6 +16,8 @@ Install-Package MySql.Data
 >
 
 - El archivo dbconfig.txt debe estar en el directorio de ejecución de tu proyecto o debes proporcionar la ruta completa al archivo.
+------------
+ ### Ejemplo utilizando c# y una conexion a una base de datos MySQL. Supondremos que el archivo .txt contiene los parámetros de conexión en un formato clave-valor.
 
 ### **Paso 1: Crear el archivo .txt**
 Crea un archivo **dbconfig.txt** con el siguiente contenido:
